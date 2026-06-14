@@ -1,5 +1,7 @@
 # Loan Default Prediction
 
+##Live Demo Link : https://loandefaultyprediction.streamlit.app/
+
 ## Overview
 This project predicts whether a credit-card customer is likely to default on their payment next month. It compares Logistic Regression and Random Forest models, tunes the decision threshold, and provides an interactive Streamlit interface for predictions.
 
@@ -14,7 +16,7 @@ The target column is `default payment next month`:
 - `1`: Default
 
 ## Project Structure
-```text
+``text
 loan-default-prediction/
 ├── data/
 │   ├── raw/
@@ -68,6 +70,7 @@ Streamlit
 Plotly
 Matplotlib
 Seaborn
+
 ###Future Improvements
 Hyperparameter tuning
 Cross-validation
