@@ -4,7 +4,9 @@
 
 ## Overview
 
-This project predicts whether a credit-card customer is likely to default on their payment next month. It compares Logistic Regression and Random Forest models, tunes the decision threshold, and provides an interactive Streamlit interface for predictions.
+This project predicts whether a credit-card customer is likely to default on their payment next month. It compares Logistic Regression and Random Forest models, tunes the classification threshold, and provides a polished Flask dashboard for interactive predictions.
+
+The Flask frontend includes example customer profiles, a custom risk gauge, default-probability output, credit-usage metrics, and simple risk-signal explanations.
 
 ## Dataset
 
@@ -19,23 +21,30 @@ The target column is `default payment next month`:
 
 ## Project Structure
 
-```
+```text
 loan-default-prediction/
-├── data/
-│   ├── raw/
-│   └── processed/
-├── models/
-├── reports/
-│   └── figures/
-├── src/
-│   ├── train.py
-│   └── predict.py
-├── app.py
-├── convert_to_csv.py
-├── explore_data.py
-├── requirements.txt
-├── .gitignore
-└── README.md
+|-- data/
+|   |-- raw/
+|   `-- processed/
+|-- models/
+|   `-- loan_default_model.joblib
+|-- reports/
+|   `-- figures/
+|-- src/
+|   |-- train.py
+|   `-- predict.py
+|-- static/
+|   |-- script.js
+|   `-- styles.css
+|-- templates/
+|   `-- index.html
+|-- flask_app.py
+|-- app.py
+|-- convert_to_csv.py
+|-- explore_data.py
+|-- requirements.txt
+|-- .gitignore
+`-- README.md
 ```
 
 ## Installation
@@ -79,7 +88,19 @@ Run a sample prediction:
 python src/predict.py
 ```
 
-Launch the Streamlit interface:
+Launch the Flask dashboard:
+
+```bash
+python flask_app.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:5000
+```
+
+Optionally launch the older Streamlit interface:
 
 ```bash
 streamlit run app.py
@@ -90,7 +111,7 @@ streamlit run app.py
 The selected Random Forest model achieved approximately:
 
 | Metric | Score |
-|--------|-------|
+|--------|------:|
 | Test ROC-AUC | 0.759 |
 | Default precision | 0.47 |
 | Default recall | 0.58 |
@@ -105,6 +126,10 @@ Threshold tuning improved the model's ability to identify customers who default,
 - Pandas
 - scikit-learn
 - Joblib
+- Flask
+- HTML
+- CSS
+- JavaScript
 - Streamlit
 - Plotly
 - Matplotlib
@@ -117,4 +142,8 @@ Threshold tuning improved the model's ability to identify customers who default,
 - SHAP model explanations
 - Probability calibration
 - Fairness and bias analysis
-- Cloud deployment
+- Flask deployment on Render or Railway
+
+## Disclaimer
+
+This project is intended for educational and portfolio purposes only. It should not be used as the sole basis for real financial or lending decisions.
