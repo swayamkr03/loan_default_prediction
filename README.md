@@ -1,6 +1,8 @@
 # Loan Default Prediction
 
-**Live Demo:** [loandefaultyprediction.streamlit.app](https://loandefaultyprediction.streamlit.app/)
+**Live Demo:** [loan-default-prediction-1-vpne.onrender.com](https://loan-default-prediction-1-vpne.onrender.com)
+
+**Legacy Streamlit Demo:** [loandefaultyprediction.streamlit.app](https://loandefaultyprediction.streamlit.app/)
 
 ## Overview
 
@@ -142,7 +144,8 @@ Threshold tuning improved the model's ability to identify customers who default,
 - SHAP model explanations
 - Probability calibration
 - Fairness and bias analysis
-- Flask deployment on Render or Railway
+- SHAP model explanations in the Flask dashboard
+- Model monitoring after deployment
 
 ## Disclaimer
 
